@@ -7,21 +7,21 @@ const NavBarThemeSwitch = () => {
 
   // La montare, citește tema salvată din localStorage
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'retro';
-    setIsDark(savedTheme === 'coffee');
+    const savedTheme = localStorage.getItem('theme') || 'luxury';
+    setIsDark(savedTheme === 'luxury');
     document.documentElement.setAttribute('data-theme', savedTheme);
   }, []);
 
   // Când se schimbă tema, salvează în localStorage și actualizează HTML
   const handleThemeChange = () => {
-    const newTheme = isDark ? 'retro' : 'coffee';
+    const newTheme = isDark ? 'retro' : 'luxury';
     setIsDark(!isDark);
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
   };
 
   return (
-    <div>
+    <div className="p-1 md:p-2 lg:p-3 xl:p-4">
       <label className="swap swap-rotate">
           <input 
             type="checkbox" 

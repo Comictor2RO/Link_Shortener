@@ -1,17 +1,14 @@
 import React from 'react'
-import NavBarLogo from './NavBarLogo'
 import NavBarThemeSwitch from './NavBarThemeSwitch'
 import LoginButton from './LoginButton'
 import RegisterButton from './RegisterButton'
+import NavBarLogo from './NavBarLogo'
 
 const NavBar = () => {
   return (
-    <div className="navbar shadow-sm sticky">
+    <div className="navbar shadow-lg sticky top-0 z-50 border-b">
         <div className="navbar-start">
-
-        </div>
-        <div className="navbar-center">
-            <NavBarLogo/>
+          <NavBarLogo/>
         </div>
         <div className="navbar-end">
             <NavBarThemeSwitch/>

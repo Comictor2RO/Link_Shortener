@@ -1,12 +1,8 @@
-import Link from 'next/link'
 import React from 'react'
 
 const NavBarLogo = () => {
   return (
-    <Link href="/" className="btn btn-ghost text-xs
-       sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
-        <p className="sm:text-sm md:text-md lg:text-lg xl:text-lg">KapooTech</p>
-    </Link>
+    <img src="/Logo.svg" alt="Logo" className=" h-12 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto object-contain"/>
   )
 }
 
