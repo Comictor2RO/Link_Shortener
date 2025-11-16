@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔗 SnipXR - Link Shortener
 
-## Getting Started
+Aplicație modernă pentru scurtarea link-urilor construită cu **Next.js 16**, **DaisyUI** și **Tailwind CSS**.
 
-First, run the development server:
+## ✨ Features
+
+- ✅ Scurtare link-uri prin TinyURL API
+- ✅ UI modern cu DaisyUI și Tailwind CSS
+- ✅ Dark/Light theme switch (Retro/Luxury)
+- ✅ Fully responsive
+- ✅ Copy to clipboard
+- ✅ Loading states și error handling
+
+## 🚀 Quick Start
+
+### 1. Instalează dependențele
+
+```bash
+npm install
+```
+
+### 2. Pornește serverul
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Deschide [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** Next.js 16 (App Router)
+- **Styling:** Tailwind CSS + DaisyUI
+- **Language:** TypeScript
+- **API:** TinyURL (extern)
 
-## Learn More
+## 📁 Structura Proiectului
 
-To learn more about Next.js, take a look at the following resources:
+```
+link_shortener/
+├── app/
+│   ├── components/
+│   │   ├── Navbar/           # Componente navbar
+│   │   └── URLCard/          # Formular de scurtare
+│   ├── Login/                # Pagină login
+│   └── page.tsx              # Homepage
+├── public/                   # Assets (logo-uri)
+└── ...
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Themes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Aplicația suportă două teme:
+- **Retro** - Tema retro cu culori vibrante
+- **Luxury** - Tema luxury cu tonuri elegante
 
-## Deploy on Vercel
+Schimbă tema folosind butonul din navbar.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License
+
+---
+
+**Built with ❤️ pentru SnipXR**

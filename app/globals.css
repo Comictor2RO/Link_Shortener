@@ -1,15 +1,150 @@
 @import "tailwindcss";
-@plugin "daisyui"{
-    themes: all;
+@plugin "daisyui" {
+  themes: all;
 }
 
-.btn, 
-.card, 
-.input, 
+.btn,
+.card,
+.input,
 .textarea,
 .fieldset,
 .rounded-box,
 .rounded-btn,
 .alert {
   border-radius: 1rem !important;
+}
+
+/* Butoane de body custom pt teme */
+@layer components{
+  .btn-body {
+    @apply btn;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-login{
+    @apply btn btn-outline;
+    transition: all 0.2s ease-in-out;
+    border-radius: 1rem;
+  }
+
+  .btn-body-rounded {
+    @apply btn;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-body:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-body-rounded:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-login:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* RETRO */
+[data-theme='retro'] .btn-body
+{
+  background-color: #C76A2A;
+  border-radius: 6px;
+  color: #fef3c7;
+}
+
+[data-theme='retro'] .btn-body:hover{
+  background-color: #A34A13;
+}
+
+[data-theme='retro'] .btn-body-rounded
+{
+  background-color: #C76A2A;
+  border-radius: 9999px;
+  color: #fef3c7;
+}
+
+[data-theme='retro'] .btn-body-rounded:hover{
+  background-color: #A34A13;
+  border-radius: 9999px;
+}
+
+/* LUXURY */
+[data-theme='luxury'] .btn-body
+{
+  background-color: #DEA44E;
+  border-radius: 6px;
+  color: #f5f5f5;
+}
+
+[data-theme='luxury'] .btn-body:hover{
+  background-color: #C98C32;
+}
+
+[data-theme='luxury'] .btn-body-rounded
+{
+  background-color: #DEA44E;
+  border-radius: 9999px;
+  color: #f5f5f5;
+}
+
+[data-theme='luxury'] .btn-body-rounded:hover{
+  background-color: #C98C32;
+  border-radius: 9999px;
+}
+
+/* Toggle pt ambele teme */
+.toggle {
+  border-radius: 9999px;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle::before {
+  transition: transform 0.2s ease-in-out;
+}
+
+/* LUXURY */
+[data-theme='luxury'] .toggle {
+  background-color: #07070a;
+  border-color: #dea44e;
+}
+
+[data-theme='luxury'] .toggle::before {
+  background-color: #dea44e;
+  border-radius: 9999px;
+}
+
+/* RETRO */
+[data-theme='retro'] .toggle {
+  background-color: #fef3c7;
+  border-color: #C76A2A;
+}
+
+[data-theme='retro'] .toggle::before {
+  background-color: #C76A2A;
+  border-radius: 9999px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Background pt ambele teme */
+.light-mode-background {
+  display: none;
+}
+
+[data-theme='retro'] body .light-mode-background {
+  display: block;
+}
+
+.dark-mode-background {
+  display: none;
+}
+
+[data-theme='luxury'] body .dark-mode-background {
+  display: block;
 }

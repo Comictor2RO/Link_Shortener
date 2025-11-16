@@ -6,7 +6,7 @@ import NavBarLogo from './NavBarLogo'
 
 const NavBar = () => {
   return (
-    <div className="navbar shadow-lg sticky top-0 z-50 border-b">
+    <div className="navbar bg-base-100 shadow-lg sticky top-0 z-50 border-b">
         <div className="navbar-start">
           <NavBarLogo/>
         </div>
