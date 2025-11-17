@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "SnipXR",
   description: "Link shortener by SnipXR",
   icons: {
-    icon: '/Logo_Tab.svg',
+    icon: '/Logo.svg',
   },
 };
 
@@ -26,7 +26,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const theme = localStorage.getItem('theme') || 'luxury';
+                  document.documentElement.setAttribute('data-theme', theme);
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
